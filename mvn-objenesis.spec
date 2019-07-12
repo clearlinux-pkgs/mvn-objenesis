@@ -4,15 +4,17 @@
 #
 Name     : mvn-objenesis
 Version  : 2.6
-Release  : 4
+Release  : 5
 URL      : https://repo1.maven.org/maven2/org/objenesis/objenesis/2.6/objenesis-2.6.jar
 Source0  : https://repo1.maven.org/maven2/org/objenesis/objenesis/2.6/objenesis-2.6.jar
 Source1  : https://repo1.maven.org/maven2/org/objenesis/objenesis-parent/2.6/objenesis-parent-2.6.pom
-Source2  : https://repo1.maven.org/maven2/org/objenesis/objenesis/2.1/objenesis-2.1.jar
-Source3  : https://repo1.maven.org/maven2/org/objenesis/objenesis/2.1/objenesis-2.1.pom
-Source4  : https://repo1.maven.org/maven2/org/objenesis/objenesis/2.5.1/objenesis-2.5.1.jar
-Source5  : https://repo1.maven.org/maven2/org/objenesis/objenesis/2.5.1/objenesis-2.5.1.pom
-Source6  : https://repo1.maven.org/maven2/org/objenesis/objenesis/2.6/objenesis-2.6.pom
+Source2  : https://repo1.maven.org/maven2/org/objenesis/objenesis/1.0/objenesis-1.0.jar
+Source3  : https://repo1.maven.org/maven2/org/objenesis/objenesis/1.0/objenesis-1.0.pom
+Source4  : https://repo1.maven.org/maven2/org/objenesis/objenesis/2.1/objenesis-2.1.jar
+Source5  : https://repo1.maven.org/maven2/org/objenesis/objenesis/2.1/objenesis-2.1.pom
+Source6  : https://repo1.maven.org/maven2/org/objenesis/objenesis/2.5.1/objenesis-2.5.1.jar
+Source7  : https://repo1.maven.org/maven2/org/objenesis/objenesis/2.5.1/objenesis-2.5.1.pom
+Source8  : https://repo1.maven.org/maven2/org/objenesis/objenesis/2.6/objenesis-2.6.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -40,20 +42,26 @@ cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis-parent/2.6
 cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis-parent/2.6
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/2.1
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/2.1
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/1.0
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/1.0
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/1.0
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/1.0
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/2.1
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/2.1
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/2.1
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/2.1
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/2.1
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/2.5.1
-cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/2.5.1
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/2.5.1
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/2.5.1
-cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/2.5.1
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/2.5.1
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/2.6
-cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/2.6
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis/2.6
 
 
 %files
@@ -62,6 +70,8 @@ cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/objenesis/objenesis
 %files data
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/org/objenesis/objenesis-parent/2.6/objenesis-parent-2.6.pom
+/usr/share/java/.m2/repository/org/objenesis/objenesis/1.0/objenesis-1.0.jar
+/usr/share/java/.m2/repository/org/objenesis/objenesis/1.0/objenesis-1.0.pom
 /usr/share/java/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar
 /usr/share/java/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.pom
 /usr/share/java/.m2/repository/org/objenesis/objenesis/2.5.1/objenesis-2.5.1.jar
