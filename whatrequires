@@ -3,3 +3,4 @@ apache-hadoop
 apache-maven
 apache-spark
 gradle
+rabbitmq-java-client
